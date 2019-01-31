@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="354.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="imageID" disable="true" fitHeight="346.0" fitWidth="620.0" layoutX="-8.0" layoutY="-16.0" opacity="0.83" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/back33.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Pane fx:id="paneSelection" layoutX="-1.0" prefHeight="159.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="choiceText" fill="#ffe100" layoutX="5.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose the dictionary:">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="23.0" />
+                     </font></Text>
+                  <Button fx:id="butonAzEn" layoutX="307.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectAzEn" prefHeight="25.0" prefWidth="77.0" text="Az-En" />
+                  <Button fx:id="buttonEnAz" layoutX="467.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectEnAz" prefHeight="25.0" prefWidth="77.0" text="En-Az" />
+               </children>
+            </Pane>
+            <Text fx:id="textAskAdd" fill="WHITE" layoutX="3.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to add words to our database?">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Text>
+            <Button fx:id="buttonAddDatabase" disable="true" layoutX="399.0" layoutY="289.0" mnemonicParsing="false" onAction="#setButtonAddDatabase" opacity="0.0" prefHeight="17.0" prefWidth="77.0" text="Add" />
+            <Pane fx:id="paneTranslation" disable="true" opacity="0.0" prefHeight="231.0" prefWidth="555.0">
+               <children>
+                  <TextField fx:id="inputText" layoutX="183.0" layoutY="23.0" />
+                  <Text fx:id="inputLanguageType" fill="#eeff00" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InputLanguage" wrappingWidth="139.13671875">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font></Text>
+                  <Text fx:id="outputLanguageType" fill="#eeff00" layoutX="14.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output language" wrappingWidth="139.13672097027302">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font></Text>
+                  <Text fx:id="translationOfWord" fill="WHITE" layoutX="183.0" layoutY="76.0" strokeWidth="0.0" style=": ;" text="Meaning of word" textAlignment="CENTER" wrappingWidth="148.50780933350325">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font></Text>
+                  <Button fx:id="buttonFind" layoutX="358.0" layoutY="67.0" mnemonicParsing="false" onAction="#setButtonFind" text="Find" />
+                  <Button fx:id="buttonBack" layoutX="413.0" layoutY="68.0" mnemonicParsing="false" onAction="#setButtonBack" text="Back" />
+               </children>
+            </Pane>
+            <Text fx:id="textAddEnglish" disable="true" fill="#eeff00" layoutX="28.0" layoutY="282.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meaning In English:" wrappingWidth="149.0000057220459">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font></Text>
+            <TextField fx:id="inputAddEnglish" disable="true" layoutX="25.0" layoutY="289.0" opacity="0.0" />
+            <Text fx:id="textAddAzerbaijani" disable="true" fill="#eeff00" layoutX="209.0" layoutY="283.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meaning In Azerbaijani:" wrappingWidth="173.5078048557043">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font></Text>
+            <TextField fx:id="inputAddAzerbaijani" disable="true" layoutX="203.0" layoutY="289.0" opacity="0.0" prefHeight="25.0" prefWidth="183.0" />
+            <Button fx:id="buttonYesAdd" layoutX="299.0" layoutY="233.0" mnemonicParsing="false" onAction="#setButtonYesAdd" text="Yes" />
+            <Button fx:id="buttonExitAdminMode" disable="true" layoutX="493.0" layoutY="289.0" mnemonicParsing="false" onAction="#setButtonExitAdminMode" opacity="0.0" prefHeight="25.0" prefWidth="107.0" text="Exit Admin mode" />
+            <Text fill="WHITE" layoutX="482.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(c) Adil Abdurrazaklı" wrappingWidth="139.13671135902405">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
